@@ -1,0 +1,106 @@
+/* Déclaration de variables CSS */
+:root{
+    --primary-color:rgb(0, 143, 17);
+    --secondary-color: rgb(0,255,65);
+    --third-color: rgb(0,59,0);
+    --fourth-color: rgb(13,2,8);
+    --font-family: "Roboto", sans-serif;
+    --transition: 1.5s;
+    --bold-font: 700;
+    --line-height: 15px;
+    --padding-base: 15px 35px;
+    --margin-top: 25px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+a:hover{
+    color: var(--secondary-color);
+}
+nav{
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--padding-base);
+    background-color: var(--fourth-color);
+    box-shadow: 0 3px 5px var(--third-color);
+}
+nav h1{
+    color: var(--primary-color);
+}
+nav h1:hover{
+    color: var(--secondary-color);
+    box-shadow: 0 3px 5px var(--third-color);
+    cursor: url("../img/icons8-yoda-100.png"), auto;
+}
+nav a{
+    color: var(--primary-color);
+    text-decoration: none;
+}
+nav a:hover{
+    color: var(--secondary-color);
+    border-bottom: 1px solid var(--secondary-color);
+    transition: var(--transition);
+}
+nav ul{
+    display: flex;
+    gap: 15px;
+}
+nav ul li{
+    font-weight: var(--bold-font);
+}
+.burger-menu{
+    color: var(--primary-color);
+    font-size: 20px;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    display: none;
+}
+.burger-menu:hover{
+    color: var(--secondary-color);
+    transition: var(--transition);
+}
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    max-width: 80%;
+    margin: auto;
+    margin-top: var(--margin-top);
+}
+.hero img{
+    height: 70%;
+    width: 70%;
+}
+.bio{
+    width: 80%;
+    padding: 6px;
+    border-radius: 6px;
+    box-shadow: 0 2px 15px 2px var(--third-color);
+}
+.bio p{
+    line-height: var(--line-height);
+    padding: 3px 0;
+    text-align: justify;
+}
+.more-about{
+    background-color: var(--fourth-color);
+    color: var(--primary-color);
+    padding: var(--padding-base);
+    margin-top: var(--margin-top);
+}
