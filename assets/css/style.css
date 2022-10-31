@@ -11,6 +11,7 @@
     --padding-base: 15px 35px;
     --margin-top: 25px;
     --margin-bottom: 6px;
+    --border-radius: 16px;
 }
 *{
     margin: 0;
@@ -91,7 +92,7 @@ nav ul li{
 .bio{
     width: 80%;
     padding: 6px;
-    border-radius: 6px;
+    border-radius: var(--border-radius);
     box-shadow: 0 2px 15px 2px var(--third-color);
 }
 .bio p{
@@ -114,4 +115,27 @@ nav ul li{
     line-height: var(--line-height);
     padding: 4px;
     text-align: center;
+}
+.skills{
+    max-width: 70%;
+    margin: auto;
+    text-align: center;
+    margin-top: var(--margin-top);
+}
+.skills-header{
+    margin-bottom: var(--margin-bottom);
+    font-weight: var(--bold-font);
+}
+.skills-wrapper img{
+    padding: 10px;
+}
+.icon{
+    width: 100px;
+    height: 100px;
+}
+.icon-card{
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 3px 5px var(--third-color);
+    margin: 10px;
 }
