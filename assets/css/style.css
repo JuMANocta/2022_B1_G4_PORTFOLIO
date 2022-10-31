@@ -10,6 +10,7 @@
     --line-height: 15px;
     --padding-base: 15px 35px;
     --margin-top: 25px;
+    --margin-bottom: 6px;
 }
 *{
     margin: 0;
@@ -103,4 +104,14 @@ nav ul li{
     color: var(--primary-color);
     padding: var(--padding-base);
     margin-top: var(--margin-top);
+    box-shadow: 0 0 3px 5px var(--third-color);
+}
+.more-about h2{
+    margin-bottom: var(--margin-bottom);
+    text-align: center;
+}
+.more-about p{
+    line-height: var(--line-height);
+    padding: 4px;
+    text-align: center;
 }
