@@ -246,3 +246,17 @@ nav ul li{
     color: var(--fourth-color);
     cursor: pointer;
 }
+
+.socials{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 1px;
+    bottom: 50%;
+}
+
+.socicon{
+    width: 33px;
+    height: 33px;
+    border-radius: var(--border-radius);
+}
