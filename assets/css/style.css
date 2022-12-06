@@ -13,7 +13,7 @@
     --margin-bottom: 6px;
     --border-radius: 15px;
     --margin-default: 10px;
-    --box-shadow: 0 0 3px 5px var(--third-color);
+    --box-shadow: 0 0 6px 5px var(--third-color);
 }
 *{
     margin: 0;
@@ -259,4 +259,14 @@ nav ul li{
     width: 33px;
     height: 33px;
     border-radius: var(--border-radius);
+}
+
+footer{
+    background-color: var(--primary-color);
+    padding: var(--padding-default);
+    text-align: center;
+    margin: var(--margin-top) 0 0;
+    box-shadow: var(--box-shadow);
+    color: white;
+    font-weight: var(--bold-font);
 }
