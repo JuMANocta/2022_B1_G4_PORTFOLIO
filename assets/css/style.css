@@ -8,10 +8,12 @@
     --transition: 1.5s;
     --bold-font: 700;
     --line-height: 15px;
-    --padding-base: 15px 35px;
+    --padding-default: 15px 35px;
     --margin-top: 25px;
     --margin-bottom: 6px;
-    --border-radius: 16px;
+    --border-radius: 15px;
+    --margin-default: 10px;
+    --box-shadow: 0 0 3px 5px var(--third-color);
 }
 *{
     margin: 0;
@@ -36,16 +38,17 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: var(--padding-base);
+    padding: var(--padding-default);
     background-color: var(--fourth-color);
-    box-shadow: 0 3px 5px var(--third-color);
+    box-shadow: var(--box-shadow);
+    z-index: 1;
 }
 nav h1{
     color: var(--primary-color);
 }
 nav h1:hover{
     color: var(--secondary-color);
-    box-shadow: 0 3px 5px var(--third-color);
+    box-shadow: var(--box-shadow);
     cursor: url("../img/icons8-yoda-100.png"), auto;
 }
 nav a{
@@ -86,26 +89,26 @@ nav ul li{
     margin-top: var(--margin-top);
 }
 .hero img{
-    height: 70%;
-    width: 70%;
+    height: 45%;
+    width: 45%;
 }
 .bio{
-    width: 80%;
-    padding: 6px;
+    width: 70%;
+    padding: 4px;
     border-radius: var(--border-radius);
-    box-shadow: 0 2px 15px 2px var(--third-color);
+    box-shadow: var(--box-shadow);
 }
-.bio p{
+.bio p, h2{
     line-height: var(--line-height);
-    padding: 3px 0;
     text-align: justify;
+    margin: 15px;
 }
 .more-about{
     background-color: var(--fourth-color);
     color: var(--primary-color);
-    padding: var(--padding-base);
+    padding: var(--padding-default);
     margin-top: var(--margin-top);
-    box-shadow: 0 0 3px 5px var(--third-color);
+    box-shadow: var(--box-shadow);
 }
 .more-about h2{
     margin-bottom: var(--margin-bottom);
@@ -136,6 +139,110 @@ nav ul li{
 .icon-card{
     background-color: var(--primary-color);
     border-radius: var(--border-radius);
-    box-shadow: 0 0 3px 5px var(--third-color);
-    margin: 10px;
+    box-shadow: var(--box-shadow);
+    margin: var(--margin-default);
+}
+.projects{
+    background-color: var(--primary-color);
+    padding: var(--padding-default);
+    margin-top: var(--margin-top);
+    box-shadow: var(--box-shadow);
+}
+.projects-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.projects-title{
+    text-align: center;
+    margin-bottom: var(--margin-bottom);
+}
+.project-card{
+    background-color: var(--secondary-color);
+    text-align: center;
+    width: 350px;
+    padding: var(--padding-default);
+    border-radius: var(--border-radius);
+    margin: var(--margin-default);
+    box-shadow: var(--box-shadow);
+    transform-origin: center;
+    transform: perspective(500px) rotateY(20deg);
+    transition: var(--transition);
+}
+.project-card:hover{
+    transform:
+        perspective(500px) 
+        rotateY(0) 
+        scale(1.5,1.5);
+    z-index: 3;
+}
+.project-pic{
+    width: 90%;
+    height: 90%;
+    border-radius: var(--border-radius);
+    margin: var(--margin-default);
+}
+.contact{
+    margin-top: var(--margin-top);
+}
+
+.contact h2{
+    text-align: center;
+    margin-bottom: var(--margin-bottom);
+    color: var(--fourth-color);
+    font: var(--font-family);
+    font-size: 26px;
+}
+
+.contact-form-container{
+    max-width: 80%;
+    margin: auto;
+    padding: var(--padding-default);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.contact-form-container label{
+    line-height: 27px;
+    font-weight: var(--bold-font);
+    color: var(--primary-color);
+}
+
+.contact-form-container textarea{
+    min-height: 62px;
+    font-size: 14px;
+}
+
+.contact-form-container .input-field{
+    width: 100%;
+    padding:  var(--padding-default);
+    border-radius: var(--border-radius);
+    border: none;
+    border: 1px outset var(--primary-color);
+    font-size: 18px;
+    outline: none;
+}
+
+.input-field::placeholder{
+    padding: var(--padding-default);
+    color: var(--primary-color);
+}
+
+.submit-btn{
+    width: 100%;
+    padding: var(--padding-default);
+    background-color: var(--primary-color);
+    color: white;
+    border: 1px solid var(--secondary-color);
+    border-radius: var(--border-radius);
+    font-size: 18px;
+    font-weight: var(--bold-font);
+    transition: var(--transition);
+}
+
+.submit-btn:hover{
+    background-color: var(--secondary-color);
+    border: 1px solid var(--third-color);
+    color: var(--fourth-color);
+    cursor: pointer;
 }
