@@ -282,3 +282,32 @@ footer{
     width: var(--icon-format);
     border-radius: var(--border-radius);
 }
+
+@media screen and (max-width: 720px){
+    nav{
+        padding: 15px 10px;
+    }
+    nav ul{
+        position: fixed;
+        background-color: var(--secondary-color);
+        flex-direction: column;
+        top: 65px;
+        left:10%;
+        width: 80%;
+        text-align: center;
+        transform: translateX(120%);
+        transition: transform 0.5s ease-in;
+        border-radius: 5px;
+        box-shadow: var(--box-shadow);
+    }
+    nav ul li{
+        margin: 8px;
+    }
+    .burger-menu{
+        display: block;
+    }
+    nav ul.show{
+        transform: translateX(0);
+    }
+    /* modifier le reste du site pour qu'il s'affiche correctement */
+}
